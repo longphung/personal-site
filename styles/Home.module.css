@@ -1,0 +1,78 @@
+.main {
+  font-family: Pattaya;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  font-size: 1rem;
+  background: #212e53;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main h1 {
+  position: relative;
+  margin: 0;
+  z-index: 10;
+  -webkit-background-clip: text;
+  background-color: #ca4246;
+  background-image: linear-gradient(
+    45deg,
+    #ca4246 16.666%,
+    #e16541 16.666%,
+    #e16541 33.333%,
+    #f18f43 33.333%,
+    #f18f43 50%,
+    #8b9862 50%,
+    #8b9862 66.666%,
+    #476098 66.666%,
+    #476098 83.333%,
+    #a7489b 83.333%
+  );
+  background-size: 100% 0%;
+  background-repeat: repeat;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow-text-simple-animation-rev 5s linear infinite alternate;
+}
+
+.titleWrapper {
+  position: relative;
+}
+
+.imageWrapper {
+  position: absolute;
+  top: -150%;
+  bottom: 0;
+  width: 400%;
+  transform: translate(-35%, -200%);
+}
+
+.imageWrapper img {
+  width: 100%;
+  animation: rotateReverse 5s linear infinite;
+}
+@keyframes rotateReverse {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rainbow-text-simple-animation-rev {
+  0% {
+    background-size: 650%;
+  }
+  50% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 650%;
+  }
+}
