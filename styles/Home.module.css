@@ -41,17 +41,26 @@
 
 .titleWrapper {
   position: relative;
+  text-align: center;
+}
+
+.titleWrapper :global(#danhrang) {
+  width: 50px;
+  height: 50px;
+  animation: shake 1000ms ease-in-out infinite;
+  z-index: 1511;
 }
 
 .imageWrapper {
   position: absolute;
   top: -150%;
   bottom: 0;
-  width: 400%;
-  transform: translate(-35%, -200%);
+  width: 420%;
+  transform: translate(-35%, -40%);
+  z-index: -1511;
 }
 
-.imageWrapper img {
+.imageWrapper :global(#dragon-phoenix) {
   width: 100%;
   animation: rotateReverse 5s linear infinite;
 }
@@ -74,5 +83,23 @@
   }
   100% {
     background-size: 650%;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0) rotate(-45deg);
+  }
+  25% {
+    transform: translate(5px);
+  }
+  50% {
+    transform: translate(0) rotate(45deg);
+  }
+  75% {
+    transform: translate(-5px);
+  }
+  100% {
+    transform: translate(0) rotate(-45deg);
   }
 }

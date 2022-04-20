@@ -18,9 +18,10 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.titleWrapper}>
+          <img src="/danhrang.png" alt="" id="danhrang" />
           <h1>Long Phụng</h1>
           <div className={styles.imageWrapper}>
-            <img src="/dragon.png" alt="ok-porcupine" />
+            <img src="/dragon.png" alt="ok-porcupine" id="dragon-phoenix" />
           </div>
         </div>
       </main>
